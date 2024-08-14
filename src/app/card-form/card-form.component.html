@@ -1,5 +1,10 @@
 @if (!formSubmitted) {
-<form class="card-form" [formGroup]="cardForm()" (ngSubmit)="submitForm()">
+<form
+  class="card-form"
+  autocomplete="cc-csc"
+  [formGroup]="cardForm()"
+  (ngSubmit)="submitForm()"
+>
   <div
     class="card-form__group"
     [class.card-form__group--error]="isInvalid.name"
@@ -10,6 +15,7 @@
       formControlName="name"
       type="text"
       placeholder="e.g. Jane Appleseed"
+      autocomplete="cc-csc"
     />
     @if (isInvalid.name) {
     <ng-container
@@ -27,6 +33,7 @@
       formControlName="number"
       type="text"
       placeholder="e.g. 1234 5678 9123 0000"
+      autocomplete="cc-csc"
     />
     @if (isInvalid.number) {
     <ng-container
@@ -43,6 +50,7 @@
           formControlName="month"
           type="text"
           placeholder="MM"
+          autocomplete="cc-csc"
           [class.invalid]="isInvalid.month"
         />
         <input
@@ -50,6 +58,7 @@
           formControlName="year"
           type="text"
           placeholder="YY"
+          autocomplete="cc-csc"
           [class.invalid]="isInvalid.year"
         />
         @if ((isInvalid.month) || (isInvalid.year)) {
@@ -72,6 +81,7 @@
         id="cvc"
         formControlName="cvc"
         type="text"
+        autocomplete="cc-csc"
         placeholder="e.g. 123"
       />
       @if (isInvalid.cvc) {
