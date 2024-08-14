@@ -1,0 +1,148 @@
+@deep-violet: #21092f;
+@light-grey: #dfdee0;
+@purplish-grey: #8f8694;
+@red: #ff5252;
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 32.7rem;
+
+  @media (min-width: 1440px) {
+    max-width: 38rem;
+    gap: 2.6rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: @deep-violet;
+  }
+
+  input {
+    appearance: none;
+    border-radius: 8px;
+    border: 1px solid @light-grey;
+    font-size: 1.8rem;
+    padding: 1.1rem 1.6rem;
+    color: @deep-violet;
+    width: 100%;
+
+    &:focus-visible,
+    &:active {
+      outline: none;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(
+            to bottom,
+            hsla(249, 99%, 64%, 1),
+            hsla(278, 94%, 30%, 1)
+          )
+          border-box;
+      border-radius: 0.8rem;
+      border: 1px solid transparent;
+    }
+
+    &::placeholder {
+      opacity: 0.25;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+
+    &--horizontal {
+      display: flex;
+      flex-direction: row;
+      gap: 1.1rem;
+
+      @media (min-width: 1440px) {
+        gap: 2rem;
+      }
+    }
+
+    &--error {
+      position: relative;
+
+      input {
+        border-color: @red !important;
+      }
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    gap: 1rem;
+    max-width: 15.2rem;
+    position: relative;
+
+    @media (min-width: 1440px) {
+      max-width: 17rem;
+    }
+
+    input {
+      flex-shrink: 1;
+
+      &.invalid {
+        border-color: @red;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -18px;
+    color: @red;
+    font-size: 1.2rem;
+  }
+}
+
+button {
+  appearance: none;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: @deep-violet;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.3422rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    color: @deep-violet;
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: @purplish-grey;
+    margin-bottom: 4.8rem;
+  }
+
+  button {
+    width: 32.7rem;
+
+    @media (min-width: 1440px) {
+      width: 38.1rem;
+    }
+  }
+}

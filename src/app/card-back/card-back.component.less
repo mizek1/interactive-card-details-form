@@ -1,0 +1,31 @@
+.card-back {
+  background-image: url("../../../public/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 28.6rem;
+  height: 15.7rem;
+  border-radius: 0.8rem;
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 7.364rem;
+    right: 3.702rem;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.1286rem;
+  }
+
+  @media (min-width: 1440px) {
+    width: 44.7rem;
+    height: 24.5rem;
+    border-radius: 1rem;
+
+    &__label {
+      top: 11rem;
+      right: 5.7rem;
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

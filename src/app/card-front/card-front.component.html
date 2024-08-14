@@ -1,0 +1,14 @@
+<div class="card-front">
+  <img class="card-front__logo" src="images/card-logo.svg" alt="Card logo" />
+  <div class="card-front__text-content">
+    <span class="text-content__number">{{ cardNumber() }}</span>
+    <div class="text-content__inner-container">
+      <span>{{ name() }}</span>
+      <span
+        >{{ expirationMonth() | number : "2.0" }}/{{
+          expirationYear() | number : "2.0"
+        }}</span
+      >
+    </div>
+  </div>
+</div>
